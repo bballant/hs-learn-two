@@ -17,8 +17,8 @@ getKV row = let v = dval (last row)
             in (k, v)
               
 
-main :: IO ()
-main = do
+foo :: IO ()
+foo = do
     csvData <- BL.readFile fidelity --"demo.csv"
     case decode HasHeader csvData of
         Left err -> putStrLn err
